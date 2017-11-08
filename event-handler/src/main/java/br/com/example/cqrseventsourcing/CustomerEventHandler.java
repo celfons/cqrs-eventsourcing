@@ -7,6 +7,7 @@ import br.com.example.cqrseventsourcing.query.repository.CustomerRepository;
 import br.com.zup.eventsourcing.core.*;
 import org.springframework.stereotype.Component;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 
@@ -17,6 +18,8 @@ public class CustomerEventHandler implements EventHandler {
     public CustomerEventHandler(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
+
+    @Transactional
     @Override
     public void handle(AggregateId aggregateId, Event event, MetaData metaData, AggregateVersion aggregateVersion) {
         if (event instanceof CustomerCreated) handle(aggregateId, (CustomerCreated) event);
