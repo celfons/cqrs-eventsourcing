@@ -13,9 +13,9 @@ public interface CustomerApi {
 
     @ResponseStatus(CREATED)
     @PostMapping(path = "/customers", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    CustomerTO create(@RequestBody CreateCustomerTO command);
+    CustomerTO create(@RequestBody CreateCustomerTO createCustomerTO);
 
     @ResponseStatus(OK)
     @PostMapping(path = "/customers/{customerId}/inactivate", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    CustomerTO inactivate(@PathVariable String customerId, @RequestBody InactivateCustomerTO command);
+    CustomerTO inactivate(@PathVariable String customerId, @RequestBody InactivateCustomerTO inactivateCustomerTO);
 }

@@ -32,6 +32,11 @@
             <groupId>br.com.example</groupId>
             <artifactId>query-repository</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>
