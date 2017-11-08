@@ -16,13 +16,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
         <!-- Event Store Framework -->
         <dependency>
             <groupId>br.com.zup</groupId>
             <artifactId>event-sourcing-core</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
