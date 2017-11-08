@@ -21,5 +21,6 @@ public class Customer {
     @Setter
     private String inactivationReason;
     private LocalDateTime createdAt;
+    @Setter
     private LocalDateTime updatedAt;
 }
