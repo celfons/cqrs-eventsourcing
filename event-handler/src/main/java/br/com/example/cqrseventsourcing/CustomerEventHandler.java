@@ -41,6 +41,7 @@ public class CustomerEventHandler implements EventHandler {
         Customer customer = customerRepository.getOne(aggregateId.getValue());
         customer.setActivated(false);
         customer.setInactivationReason(event.getReason());
+        customer.setUpdatedAt(LocalDateTime.now(ZoneId.of("UTC")));
         customerRepository.save(customer);
     }
 }
